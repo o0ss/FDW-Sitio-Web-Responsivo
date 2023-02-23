@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<!-- 
+        Sitio web responsivo
+        Alumno: Oscar René Sixtos Torres
+        Fundamentos de Desarrollo Web
+        Facultad de Ingeniería, UASLP
+        20 de febrero de 2023
+ -->
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oscar Sixtos - Sitio web Responsivo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="encabezado">
+            <div class="logo">
+                <div class="spacer"></div>
+                <img src="img/UASLP.png", class="logo-img">
+                <div class="linea"> </div>
+                <img src="img/Escudo.png", class="logo-img">
+                <div class="spacer"></div>
+            </div>
+            <div class="banner"></div>
+
+        </div>
+
+        <div class="nav-bar">
+            <div class="nav-bar-item">
+                <div class="center-text">INICIO</div>
+            </div>
+            <div class="nav-bar-item">
+                <div class="center-text">ASPIRANTES</div>
+            </div>
+            <div class="nav-bar-item">
+                <div class="center-text">ESTUDIANTES</div>
+            </div>
+            <div class="nav-bar-item">
+                <div class="center-text">EGRESADOS</div>
+            </div>
+            <div class="nav-bar-item">
+                <div class="center-text">PROFESORES</div>
+            </div>
+            <div class="nav-bar-item">
+                <div class="center-text">ADMINISTRATIVOS</div>
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">
+            </div>
+        </div>
+
+        <script>
+            function toggleMenu() {
+                var items = document.getElementsByClassName("menu-item");
+                Array.from(items).forEach(
+                    (x) => {
+                        if (x.style.display === "block") {
+                            x.style.display = "none";
+                        } else {
+                            x.style.display = "block";
+                        }
+                    }
+                )
+            }
+        </script>
+
+        <div class="clearfix">
+
+            <div class="menu">
+                <div class="menu-item">FUTUROS ALUMNOS</div>
+                <div class="menu-item">ALUMNOS</div>
+                <div class="menu-item">EGRESADOS</div>
+                <div class="menu-item">POSGRADOS</div>
+                <div class="menu-item">INFORMATIVA</div>
+                <div class="menu-item">ACADEMIAS</div>
+                <div class="menu-item">CONTACTO</div>
+                <div class="menu-item">CALENDARIO</div>
+                <div class="menu-item">PROFESORES</div>
+            </div>
+
+            <div class="secc-derecha">
+                SECCION DERECHA
+            </div>
+
+            <div class="pi-accesos">
+                <div class="bloque-gris">PROGRAMAS INSTITUCIONALES</div>
+                <div class="pis">
+                    <img src="img/UniSalud.png" alt="">
+                    <img src="img/UASLPAgendaAmbiental.png" alt="">
+                    <img src="img/UASLP_seguridad.png" alt="">
+                    <img src="img/UASLP_Observatorio_Equidad_y_Genero.png" alt="">
+                </div>
+                <div class="bloque-gris">ACCESOS</div>
+                <div class="accesos">
+                    <img src="img/admision.png" alt="", class="img-accesos">
+                    <img src="img/comunicacion-social.png" alt="", class="img-accesos">
+                    <img src="img/tv_universitaria.png" alt="", class="img-accesos">
+                    <img src="img/radio_universidad.png" alt="", class="img-accesos">
+                </div>
+            </div>
+        
+        </div> 
+        
+        <div class="pie">
+            <p>
+                <span class="bold">UASLP</span><br>
+                Universidad Autónoma de San Luis Potosí<br>
+                Dr. Manuel Nava No. 8, Col. Zona Universitaria Poniente, 
+                C.P. 78290, San Luis Potosi, S. L. P., México<br>
+                © 2022 Todos los derechos reservados.
+            </p>
+
+        </div>
+    </div>
+</body>
+</html>

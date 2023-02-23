@@ -1,0 +1,315 @@
+/* 
+        Estilos para Sitio web responsivo
+        Alumno: Oscar René Sixtos Torres
+        Fundamentos de Desarrollo Web
+        Facultad de Ingeniería, UASLP
+        20 de febrero de 2023
+*/
+
+
+/* Estilos comunes para los 3 tamaños */
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.spacer {
+    flex: auto;
+}
+
+.center-text {
+    width: 100%;
+    height: fit-content;
+    margin: auto;
+    text-align: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+img {
+    margin: 2px 5px;
+    vertical-align: top;
+}
+
+.container {
+    margin: auto;
+    width: 100%;
+}
+
+.encabezado {
+    background-color: rgb(21, 50, 89);
+    height: 160px;
+}
+
+.logo {
+    margin: 0% 2%;
+    width: 36%;
+    height: 100%;
+    float: left;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+}
+
+.logo-img {
+    float: left;
+    width: calc(48% - 21px);
+}
+
+.linea {
+    width: 1px;
+    background-color: whitesmoke;
+    height: 40%;
+    margin: 0px 10px;
+}
+
+.banner {
+    background-image: url(img/banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 60%;
+    float: right;
+}
+
+.nav-bar {
+    margin: 5px 0px;
+    background-color: rgb(218, 218, 218);
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav-bar-item {
+    /* float:left; */
+    width: 16.67%;
+    height: 100%;
+    display: flex;
+}
+
+.nav-bar-item:hover {
+    background-color: rgb(198, 198, 198);
+}
+
+.hamburger {
+    width: 0px;
+}
+
+.menu {
+    width: 18%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    float: left;
+}
+
+.menu-item {
+    background-color: rgb(21, 114, 180);
+    color: white;
+    margin: 0px 0px 4px 0px;
+    padding: 12px 0px;
+    text-align: center;
+}
+
+.menu-item:hover {
+    background-color: rgb(8, 96, 158);
+}
+
+.secc-derecha {
+    background-color: rgb(255, 228, 198);
+    margin: 0px 10px;
+    padding: 4px 0px ;
+    float: left;
+    width: calc(62% - 20px);
+    height: 400px;
+}
+
+.pi-accesos {
+    width: 20%;
+    background-color: white;
+    float: left;
+}
+
+.bloque-gris {
+    background-color: rgb(153, 153, 153);
+    color: white;
+    padding: 10px 8px;
+    margin: 0px 0px 6px 0px;
+}
+
+.pis {
+    margin: 0px 0px 4px 0px;
+}
+
+.pie {
+    background-color: rgb(218, 218, 218);
+    padding: 20px 30px;
+    margin: 10px 0px 0px 0px;
+}
+
+/* Para pantalla de escritorio */
+@media screen and (min-width:1025px) {
+    .container {
+        width: 1170px;
+    }
+
+    .img-accesos {
+        display: block;
+        margin: 8px 4px;
+    }
+
+    .menu-item {
+        display: block;
+    }
+}
+
+/* Para pantalla de tablet */
+@media screen and (min-width:681px) and (max-width:1024px) {
+
+    .container {
+        width: 700px;
+    }
+
+    .banner {
+        background-position: center;
+    }
+
+    .nav-bar-item {
+        font-size: 11px;
+    }
+
+    .menu {
+        width: 100%;
+        flex-direction: row;
+        margin: 0px 0px 4px 0px;
+    }
+
+    .menu-item {
+        margin: 0px 2px;
+        width: calc(100% / 9 - 4px );
+        font-size: xx-small;
+        display: block;
+    }
+
+    .secc-derecha {
+        margin: 0px;
+        width: 100%;
+    }
+
+    .pi-accesos {
+        width: 100%;
+        margin: 8px 0px 0px 0px;
+    }
+
+    .bloque-gris {
+        font-size: small;
+    }
+
+    .img-accesos {
+        display: inline;
+        margin: 4px 4px;
+    }
+
+    .pie {
+        font-size: small;
+    }
+}
+
+/* Para pantalla de teléfono móvil */
+@media screen and (min-width:0px) and (max-width:680px) {
+    .container {
+        width: 100%;
+    }
+
+    .encabezado {
+        height: 200px;
+    }
+
+    .logo {
+        height: 40%;
+        width: 300px;
+    }
+
+    .linea {
+        height: 60%;
+    }
+
+    .banner {
+        height: 60%;
+        width: 100%;
+        background-position: center;
+    }
+    .nav-bar {
+        height: 30px;
+        margin: 4px 0px 2px 0px;
+    }
+
+    .nav-bar-item {
+        width: calc((100% - 60px) / 6);
+        font-size: 1.5vw;
+        visibility:hidden;
+    }
+
+    .hamburger {
+        width: 60px;
+        height: 30px;
+        background-image: url(img/menu.PNG);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .menu {
+        width: 100%;
+        flex-direction: column;
+        margin: 0px;
+    }
+
+    .menu-item {
+        margin: 1px 0px;
+        width: 100%;
+        font-size: x-small;
+        padding: 6px 0px;
+        display: none;
+    }
+
+    .secc-derecha {
+        margin: 2px 0px 0px 0px;
+        width: 100%;
+        font-size: small;
+        height: 300px;
+    }
+
+    .pi-accesos {
+        width: 100%;
+        margin: 6px 0px 0px 0px;
+    }
+
+    .bloque-gris {
+        font-size: small;
+    }
+
+    .pis, .accesos {
+        padding: 10px 20px;
+    }
+
+    .img-accesos {
+        display: inline;
+        margin: 4px 4px;
+    }
+
+    .pie {
+        font-size: small;
+        text-align: center;
+        padding: 20px;
+    }
+}
